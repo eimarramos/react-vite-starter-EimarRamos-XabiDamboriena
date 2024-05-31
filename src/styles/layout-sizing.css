@@ -1,0 +1,8 @@
+:root{
+    --layout-size-desktop-content: 57.5rem; /*920px*/
+    --layout-size-desktop-gap: 1rem; /*16px*/
+    --layout-size-mobile-content: 100%;
+    --layout-size-mobile-gap: 1rem;
+    
+    --media-query-size: 768px;
+}
