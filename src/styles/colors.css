@@ -1,3 +1,32 @@
 :root{
-    --pokemon-grass: #A2CE69;
+    --color-type-grass: #A2CE69;
+    --color-type-bug: #C6D2B2;
+    --color-type-electric: #EBD56C;
+    --color-type-ground: #D3AE6B;
+    --color-type-fire: #D36255;
+    --color-type-fighting: #B44D54;
+    --color-type-poison: #9756dc;
+    --color-type-psychic: #DB6AB5;
+    --color-type-fairy: #E8A9D3;
+    --color-type-dragon: #B7B6DB;
+    --color-type-flying: #A2BFEB;
+    --color-type-ghost: #655A7D;
+    --color-typoe-water: #3CAFE8;
+    --color-type-normal: #D1D2C0;
+    --color-type-rock: #A49D9A;
+    --color-type-steal: #78817E;
+    --color-type-dark: #3D413F;
+    --color-brand-0: #FFFFFF;
+    --color-brand-05: #F5F4F5;
+    --color-brand-1: #EAEAEB;
+    --color-brand-2: #D6D4D6;
+    --color-brand-3: #C1BFC2;
+    --color-brand-4: #ADA9AD;
+    --color-brand-5: #989499;
+    --color-brand-6: #5C5A5D;
+    --color-brand-7: #3F3D3F;
+    --color-brand-8: #212021;
+    --color-brand-9: #030303;
+
+
 }
