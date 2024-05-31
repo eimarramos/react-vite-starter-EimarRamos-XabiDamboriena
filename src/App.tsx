@@ -1,5 +1,11 @@
+import { HomeComponent } from './pages/Home/Home'
+
 function App() {
-  return <main>My Pokédex</main>
+  return (
+    <>
+      <HomeComponent />
+    </>
+  )
 }
 
 export default App

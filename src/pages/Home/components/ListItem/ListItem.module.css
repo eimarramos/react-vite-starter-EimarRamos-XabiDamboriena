@@ -1,0 +1,12 @@
+.pokemon_card{
+    display: flex;
+    flex-flow: column;
+
+    height: 400px;
+    width: 361px;
+    padding: 8px;
+
+    border-radius: 24px;
+    background-color: #A2CE69;
+}
+

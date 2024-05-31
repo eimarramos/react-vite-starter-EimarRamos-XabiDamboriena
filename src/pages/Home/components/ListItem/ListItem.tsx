@@ -1,22 +1,22 @@
-
+import style from './ListItem.module.css'
 
 export const ListItemComponent = () => (
-    <article>
-        <header>
-            <h3>Bulbasaur</h3>
-            <p>#001</p>
+    <article className={style.pokemon_card}>
+        <header className={style.card_header}>
+            <h3 className={style.card_header__name}>Bulbasaur</h3>
+            <p className={style.card_header_number}>#001</p>
         </header>
-        <section>
-            <img src="" alt="" />
-            <div>
+        <section className={style.card_body}>
+            <img className={style.card_body__photo} src="" alt="" />
+            <div className={style.card_body__types}>
                 <p>Grass</p>
                 <p>Poison</p>
             </div>
-            <div>
+            <div className={style.card_body__measures}>
                 <p> 6.9 Kg</p>
                 <p> 0.7 m</p>
             </div>
-            <div>
+            <div className={style.card_body__stats}> 
                 <p>HP</p>
                 <p>045</p>
                 <div>
