@@ -1,8 +1,7 @@
 @import './styles/colors.css';  
 @import './styles/font.css';
-@import './styles/shadows.css';
-@import './styles/spacing.css';
-@import './styles/text-sizing.css';
+@import './styles/variables.css';
+
 body{
   font-family: var(--desktop-font);
 }
