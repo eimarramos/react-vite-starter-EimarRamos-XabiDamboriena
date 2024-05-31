@@ -10,3 +10,16 @@
     background-color: #A2CE69;
 }
 
+.card_header{
+    display: flex;
+}
+
+.card_header__name{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card_header_number{
+    margin-left: auto;
+}
+
