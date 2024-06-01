@@ -3,7 +3,8 @@
 @import './styles/variables.css';
 
 html,
-body{
+body,
+main{
   min-height: 100svh;
   background-color: var(--color-brand-05);
 }
