@@ -52,7 +52,7 @@
     display: flex;
     justify-content: center;
 
-    height: 2rem; /* */
+    height: var(--spacing-4xl);
     width: 100%;   
 }
 
@@ -97,8 +97,42 @@
 }
 
 .card_body__pills_icon{
-    height: 16px;
-    width: 16px;
+    height: var(--spacing-m);
+    width: var(--spacing-m);
+}
+
+.card_body__measures_container{
+display: flex;
+
+height: var(--spacing-2xl);
+gap: var(--spacing-m);
+
+}
+
+.card_body_measures{
+display: flex;
+align-items: center;
+
+gap: var(--spacing-2xs);
+
+
+}
+
+.card_body_measures__icon{
+    height: var(--spacing-l);
+    width: var(--spacing-l);
+}
+
+.card_body_measures__separator{
+    border:solid 0.5px var(--color-brand-1);
+}
+
+.card_body__stats{
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+    gap: var(--spacing-3xs);
 }
 
 @media (max-width: 768px) {
