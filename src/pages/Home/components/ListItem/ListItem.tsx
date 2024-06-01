@@ -1,4 +1,5 @@
 import style from './ListItem.module.css'
+import bulbasaur from '../../../../assets/images/bulbasaur.png'
 
 export const ListItemComponent = () => (
     <article className={style.pokemon_card}>
@@ -7,7 +8,7 @@ export const ListItemComponent = () => (
             <p className={style.card_header_number}>#001</p>
         </header>
         <section className={style.card_body}>
-            <img className={style.card_body__photo} src="" alt="" />
+            <img className={style.card_body__photo} src={bulbasaur} alt="" />
             <div className={style.card_body__types}>
                 <p>Grass</p>
                 <p>Poison</p>

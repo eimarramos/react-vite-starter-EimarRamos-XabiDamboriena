@@ -3,6 +3,9 @@
 :root{
     --desktop-font: "Kanit", sans-serif;
 
+    /*Default font-weight*/
+    --font-weight: 400;
+
     /*Text sizing*/
     
         /*MOBILE*/

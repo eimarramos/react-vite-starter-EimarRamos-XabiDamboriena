@@ -2,6 +2,33 @@
 @import './styles/font.css';
 @import './styles/variables.css';
 
+html,
 body{
+  min-height: 100svh;
+  background-color: var(--color-brand-05);
+}
+
+ul,
+ol{
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+  font-weight: var(--font-weight);
+}
+
+*,
+::after,
+::before{
   font-family: var(--desktop-font);
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
