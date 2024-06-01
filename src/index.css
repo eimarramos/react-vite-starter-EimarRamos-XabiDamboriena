@@ -23,6 +23,10 @@ p{
   font-weight: var(--font-weight);
 }
 
+a{
+  text-decoration: none;
+}
+
 *,
 ::after,
 ::before{

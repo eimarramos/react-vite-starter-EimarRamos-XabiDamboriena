@@ -6,7 +6,7 @@ export const ListItemComponent = () => (
   <article className={style.pokemon_card}>
     <header className={style.card_header}>
       <h3 className={style.card_header__name}>Bulbasaur</h3>
-      <p className={style.card_header_number}>#001</p>
+      <p className={style.card_header_id}>#001</p>
     </header>
     <section className={style.card_body}>
       <div className={style.card_body__image_container}>

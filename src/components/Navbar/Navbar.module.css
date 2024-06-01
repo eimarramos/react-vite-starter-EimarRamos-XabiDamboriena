@@ -1,0 +1,43 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 80px;
+
+    box-shadow: var(--shadow-size-m);
+}
+
+.nav{
+
+    width: 920px;
+    height: 44px;
+
+}
+
+.nav__link{
+
+    display: flex;
+    align-items: center;
+
+    gap: var(--spacing-s);
+
+}
+
+.nav__icon{
+
+    width: 44px;
+    height: 44px;
+
+}
+
+.nav__title{
+    color: var(--color-brand-9);
+
+    font-weight: 600;
+    font-size: var(--desktop-text-size-headline);
+}
