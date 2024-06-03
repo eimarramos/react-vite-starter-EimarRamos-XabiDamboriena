@@ -1,16 +1,16 @@
-@import './styles/colors.css';  
+@import './styles/colors.css';
 @import './styles/font.css';
 @import './styles/variables.css';
 
 html,
 body,
-main{
+main {
   min-height: 100svh;
   background-color: var(--color-brand-05);
 }
 
 ul,
-ol{
+ol {
   list-style: none;
 }
 
@@ -20,17 +20,17 @@ h3,
 h4,
 h5,
 h6,
-p{
+p {
   font-weight: var(--font-weight);
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 *,
 ::after,
-::before{
+::before {
   font-family: var(--desktop-font);
 
   box-sizing: border-box;

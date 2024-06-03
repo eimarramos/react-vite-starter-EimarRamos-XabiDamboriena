@@ -4,11 +4,13 @@ import { FooterComponent } from './components/Footer/Footer'
 
 function App() {
   return (
-    <main>
+    <>
       <NavbarComponent />
-      <HomeComponent />
+      <main>
+        <HomeComponent />
+      </main>
       <FooterComponent />
-    </main>
+    </>
   )
 }
 
