@@ -8,6 +8,7 @@ export const mapPokemon = (data: PokeApiResponse): Pokemon => {
     height: data.height,
     weight: data.weight,
     image: data.sprites.other.dream_world.front_default,
-    Stats: [],
+    stats: [],
+    types: data.types
   }
 }
