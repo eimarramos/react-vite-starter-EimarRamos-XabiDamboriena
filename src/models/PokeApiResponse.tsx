@@ -10,4 +10,10 @@ export type PokeApiResponse = {
       }
     }
   }
+  types: Type[]
+}
+
+export type Type = {
+  name: string
+  url: string
 }

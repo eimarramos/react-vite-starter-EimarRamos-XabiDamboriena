@@ -6,5 +6,6 @@ export type Pokemon = {
   image: string
   weight: number
   height: number
+  
   Stats: Stat[]
 }

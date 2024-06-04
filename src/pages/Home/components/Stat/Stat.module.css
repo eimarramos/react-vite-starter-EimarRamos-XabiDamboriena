@@ -17,18 +17,6 @@
     color: var(--color-brand-9);
 }
 
-.bar_progress_container{
-    height: var(--spacing-2xs);
+.bar_progress{
     width: 100%;
-
-    border-radius: var(--radius-2xs);
-    background-color: var(--color-brand-1);
-}
-
-.bar_progress_container__bar_progress{
-    height: 100%;
-    width: 50px;
-
-    border-radius: var(--radius-2xs);
-    background-color: black;
 }

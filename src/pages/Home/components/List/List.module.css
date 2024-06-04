@@ -1,0 +1,15 @@
+.list_container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    width: var(--layout-size-desktop-content);
+    max-width: 100%;
+    gap: var(--spacing-2xl);
+}
+
+@media (max-width: 768px) {
+    .list_container{
+        width: 100%;
+    }
+}
