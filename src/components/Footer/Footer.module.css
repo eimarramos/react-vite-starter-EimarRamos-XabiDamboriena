@@ -9,6 +9,8 @@
   width: 100%;
   height: 62px;
   padding: var(--spacing-m);
+  margin-top: auto;
+
   background-color: var(--color-brand-9);
 }
 

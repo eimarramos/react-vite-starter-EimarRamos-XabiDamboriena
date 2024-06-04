@@ -2,6 +2,7 @@ import style from './ListItem.module.css'
 import bulbasaur from '../../../../assets/images/bulbasaur.png'
 import { StatComponent } from '../Stat/Stat'
 import { Pokemon } from '../../../../models/Pokemon'
+import image from '../../../../assets/images/bulbasaur.png'
 
 type ListItemProps = {
   pokemon: Pokemon
@@ -15,7 +16,7 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => (
     </header>
     <section className={style.card_body}>
       <div className={style.card_body__image_container}>
-        <img className={style.card_body__image} src={pokemon.image} alt="" />
+        <img className={style.card_body__image} src={image} alt="" />
       </div>
       <div className={style.card_body__types}>
         <div

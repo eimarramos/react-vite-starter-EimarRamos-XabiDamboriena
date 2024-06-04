@@ -19,7 +19,7 @@ export const GetPokemon = (name: string): GetPokemonResult => {
       setData(mappedPokemon)
     }
     fetchData()
-  })
+  },[name])
 
   return { data }
 }
