@@ -14,3 +14,9 @@ export type PokeApiResponse = {
   }
   types: Type[]
 }
+
+export type Type = {
+  type: {
+    name: string
+  }
+}

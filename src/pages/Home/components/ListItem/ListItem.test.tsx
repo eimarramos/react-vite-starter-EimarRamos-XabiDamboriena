@@ -10,7 +10,7 @@ test("El componente deberia rederizarse", () => {
         image: '',
         name: 'Pikachu',
         stats: [{name: 'ATQ', value: 50}],
-        types: [{type: {}}],
+
         weight: 80 
     }
 

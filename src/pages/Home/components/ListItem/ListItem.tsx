@@ -12,9 +12,8 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
   const colors: Record<string, string> = {
     electric: style.fire
   }
-  console.log(pokemon.types)
   return (
-    <article className={ `${style.pokemon_card} ${colors[pokemon.types[0].type.name]}`}>
+    <article className={ `${style.pokemon_card} ${colors[pokemon.types[0]]}`}>
       <header className={style.card_header}>
         <h3 className={style.card_header__name}>{pokemon.name}</h3>
         <p className={style.card_header_id}>#{pokemon.id}</p>

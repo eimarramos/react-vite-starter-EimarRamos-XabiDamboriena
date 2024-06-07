@@ -6,13 +6,8 @@ export type Pokemon = {
   image: string
   weight: number
   height: number
-  types: Type[]
+  types: string[]
   stats: Stat[]
 }
 
-export type Type = {
-  type: {
-    name: string
-    url: string
-  }
-}
+
