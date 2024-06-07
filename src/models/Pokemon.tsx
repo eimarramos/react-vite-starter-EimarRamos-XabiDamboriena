@@ -11,6 +11,8 @@ export type Pokemon = {
 }
 
 export type Type = {
-  name: string
-  url: string
+  type: {
+    name: string
+    url: string
+  }
 }
