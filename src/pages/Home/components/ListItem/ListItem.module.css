@@ -146,4 +146,8 @@ gap: var(--spacing-2xs);
     }
 }
 
+.fire{
+    background-color: var(--color-type-fire);
+}
+
 
