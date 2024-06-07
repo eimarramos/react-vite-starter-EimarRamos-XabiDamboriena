@@ -1,14 +1,13 @@
 import style from './List.module.css'
-import { Pokemon } from "../../../../models/Pokemon"
 import { ListItemComponent } from "../ListItem/ListItem"
-import { GetPokemon } from '../../../../services/PokemonService'
+import { useGetPokemon } from '../../../../services/PokemonService'
 
 export const ListComponent = () => {
-    const pokemon: Pokemon | undefined =  GetPokemon('pikachu').data
+    const  { data } =  useGetPokemon('pikachu');
 
     return(
         <section className={style.list_container}>
-             {pokemon && <ListItemComponent pokemon={pokemon}></ListItemComponent>}
+             {data && <ListItemComponent pokemon={data}></ListItemComponent>}
         </section>
     )
 }

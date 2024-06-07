@@ -7,7 +7,6 @@ type ListItemProps = {
   pokemon: Pokemon
 }
 
-
 export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
 
   const colors: Record<string, string> = {
