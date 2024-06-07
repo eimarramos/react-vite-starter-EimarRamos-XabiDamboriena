@@ -1,5 +1,4 @@
 import style from './ListItem.module.css'
-import bulbasaur from '../../../../assets/images/bulbasaur.png'
 import { StatComponent } from '../Stat/Stat'
 import { Pokemon } from '../../../../models/Pokemon'
 
@@ -9,9 +8,11 @@ type ListItemProps = {
 
 export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
 
+  console.log(pokemon)
   const colors: Record<string, string> = {
     electric: style.fire
   }
+
   return (
     <article className={ `${style.pokemon_card} ${colors[pokemon.types[0]]}`}>
       <header className={style.card_header}>
@@ -27,7 +28,7 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
             className={`${style.card_body_pills} ${style['card_body_pills--grass']}`}
           >
             <img
-              src={bulbasaur}
+              src={pokemon.image}
               alt=""
               className={style.card_body__pills_icon}
             />
@@ -37,7 +38,7 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
             className={`${style.card_body_pills} ${style['card_body_pills--poison']}`}
           >
             <img
-              src={bulbasaur}
+              src={pokemon.image}
               alt=""
               className={style.card_body__pills_icon}
             />
@@ -47,7 +48,7 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
         <div className={style.card_body__measures_container}>
           <div className={style.card_body_measures}>
             <img
-              src={bulbasaur}
+              src={pokemon.image}
               alt=""
               className={style.card_body_measures__icon}
             />
@@ -56,7 +57,7 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
           <hr className={style.card_body_measures__separator} />
           <div className={style.card_body_measures}>
             <img
-              src={bulbasaur}
+              src={pokemon.image}
               alt=""
               className={style.card_body_measures__icon}
             />
