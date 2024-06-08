@@ -1,6 +1,9 @@
 import style from './ListItem.module.css'
 import { StatComponent } from '../Stat/Stat'
 import { Pokemon } from '../../../../models/Pokemon'
+import { Weight } from '../../../../assets/svg/Weight'
+import { Ruler } from '../../../../assets/svg/Ruler'
+
 
 type ListItemProps = {
   pokemon: Pokemon
@@ -47,20 +50,12 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
         </div>
         <div className={style.card_body__measures_container}>
           <div className={style.card_body_measures}>
-            <img
-              src={pokemon.image}
-              alt=""
-              className={style.card_body_measures__icon}
-            />
+            <Weight />
             <p>{pokemon.weight} kg</p>
           </div>
           <hr className={style.card_body_measures__separator} />
           <div className={style.card_body_measures}>
-            <img
-              src={pokemon.image}
-              alt=""
-              className={style.card_body_measures__icon}
-            />
+            <Ruler />
             <p>{pokemon.height} m</p>
           </div>
         </div>
