@@ -11,7 +11,7 @@ export const TypeComponent: React.FC<TypeProps> = ({name}) => {
       className={`${style.card_body_pills} ${colors[name]}`}
     >
       <img src={name} alt="" className={style.card_body__pills_icon} />
-      <p>Poison</p>
+      <p>{name}</p>
     </div>
   )
 }
