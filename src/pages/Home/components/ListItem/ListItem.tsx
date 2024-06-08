@@ -4,20 +4,33 @@ import { Pokemon } from '../../../../models/Pokemon'
 import { Weight } from '../../../../assets/svg/Weight'
 import { Ruler } from '../../../../assets/svg/Ruler'
 
-
 type ListItemProps = {
   pokemon: Pokemon
 }
 
 export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
-
-  console.log(pokemon)
   const colors: Record<string, string> = {
-    electric: style.fire
+    electric: style.electric,
+    bug: style.bug,
+    grass: style.grass,
+    ground: style.ground,
+    fire: style.fire,
+    fighting: style.fihting,
+    poison: style.poison,
+    psychic: style.psychic,
+    fairy: style.fairy,
+    dragon: style.dragon,
+    flying: style.flying,
+    ghost: style.ghost,
+    water: style.water,
+    normal: style.normal,
+    rock: style.rock,
+    steal: style.steal,
+    dark: style.dark,
   }
 
   return (
-    <article className={ `${style.pokemon_card} ${colors[pokemon.types[0]]}`}>
+    <article className={`${style.pokemon_card} ${colors[pokemon.types[0]]}`}>
       <header className={style.card_header}>
         <h3 className={style.card_header__name}>{pokemon.name}</h3>
         <p className={style.card_header_id}>#{pokemon.id}</p>
