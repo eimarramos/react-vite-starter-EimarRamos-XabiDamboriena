@@ -5,7 +5,6 @@ import { Weight } from '../../../../assets/svg/Weight'
 import { Ruler } from '../../../../assets/svg/Ruler'
 import { colors } from '../../../../utils/Colors/ColorsMapper'
 import { TypeComponent } from '../Type/Type'
-import { ReactNode } from 'react'
 
 type ListItemProps = {
   pokemon: Pokemon
@@ -23,8 +22,8 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
           <img className={style.card_body__image} src={pokemon.image} alt="" />
         </div>
         <div className={style.card_body__types}>
-          {pokemon.types.map(type => {
-            return <TypeComponent name={type} />
+          {pokemon.types.map((type, index) => {
+            return <TypeComponent key={index} name={type} />
           })}
         </div>
         <div className={style.card_body__measures_container}>
@@ -39,12 +38,13 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
           </div>
         </div>
         <div className={style.card_body__stats}>
-          <StatComponent value={35} name="ATQ"></StatComponent>
-          <StatComponent value={35} name="ATQ"></StatComponent>
-          <StatComponent value={35} name="ATQ"></StatComponent>
-          <StatComponent value={35} name="ATQ"></StatComponent>
-          <StatComponent value={35} name="ATQ"></StatComponent>
-          <StatComponent value={35} name="ATQ"></StatComponent>
+          {
+            pokemon.stats.map((stat, index) => {
+              return (
+                <StatComponent key={index} name={stat.name} value={stat.value} />
+              )
+            })
+          }
         </div>
       </section>
     </article>

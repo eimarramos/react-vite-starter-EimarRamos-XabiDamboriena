@@ -1,5 +1,3 @@
-import { Type } from "./Pokemon"
-
 export type PokeApiResponse = {
   id: number
   name: string
@@ -13,9 +11,10 @@ export type PokeApiResponse = {
     }
   }
   types: Type[]
+  stats: [{ base_stat: number; stat: { name: string } }]
 }
 
-export type Type = {
+type Type = {
   type: {
     name: string
   }

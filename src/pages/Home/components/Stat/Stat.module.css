@@ -1,10 +1,15 @@
 .stat_container{
     display: flex;
-    align-items: center;
 
     height: var(--spacing-m);
     width: 100%;
     gap: var(--spacing-xs);
+}
+.stat_name_value_container{
+    display: flex;
+    justify-content: space-between;
+
+    width:3.1875rem;
 }
 
 .stat_container__stat_name{

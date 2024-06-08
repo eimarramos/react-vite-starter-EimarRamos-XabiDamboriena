@@ -3,7 +3,7 @@ import { ListItemComponent } from "../ListItem/ListItem"
 import { useGetPokemon } from '../../../../services/PokemonService'
 
 export const ListComponent = () => {
-    const  { data } =  useGetPokemon('bulbasaur');
+    const  { data } =  useGetPokemon('charizard');
 
     return(
         <section className={style.list_container}>
