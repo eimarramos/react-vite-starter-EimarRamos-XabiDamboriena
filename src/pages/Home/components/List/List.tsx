@@ -1,13 +1,15 @@
 import style from './List.module.css'
-import { ListItemComponent } from "../ListItem/ListItem"
-import { useGetPokemon } from '../../../../services/PokemonService'
+import { ListItemComponent } from '../ListItem/ListItem'
+import { useGetPokemons } from '../../../../hooks/useFetchPokemons'
 
 export const ListComponent = () => {
-    const  { data } =  useGetPokemon('charizard');
-
-    return(
-        <section className={style.list_container}>
-             {data && <ListItemComponent pokemon={data}></ListItemComponent>}
-        </section>
-    )
+  const pokemons = useGetPokemons()
+  return (
+    <section className={style.list_container}>
+      {pokemons &&
+        pokemons.map(pokemon => (
+          <ListItemComponent pokemon={pokemon}></ListItemComponent>
+        ))}
+    </section>
+  )
 }
