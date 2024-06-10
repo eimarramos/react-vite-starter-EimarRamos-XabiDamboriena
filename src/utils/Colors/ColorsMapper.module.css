@@ -8,13 +8,10 @@
 
 .electric {
     background: var(--color-type-electric);
-
-
 }
 
 .ground {
     background: var(--color-type-ground);
-
 }
 
 .bug {
@@ -63,7 +60,6 @@
 
 .water {
     background: var(--color-type-water);
-
 }
 
 .normal {
