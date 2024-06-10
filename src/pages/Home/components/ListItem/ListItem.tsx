@@ -6,6 +6,7 @@ import { Ruler } from '../../../../assets/svg/Ruler'
 import { colors } from '../../../../utils/Colors/ColorsMapper'
 import { TypeComponent } from '../Type/Type'
 import { formatNumber } from '../../../../utils/NumberFormater/NumberFormater'
+import { FormatString } from '../../../../utils/StringFormater/StringFormater'
 
 type ListItemProps = {
   pokemon: Pokemon
@@ -15,7 +16,7 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
   return (
     <article className={`${style.pokemon_card} ${colors[pokemon.types[0]]}`}>
       <header className={style.card_header}>
-        <h3 className={style.card_header__name}>{pokemon.name}</h3>
+        <h3 className={style.card_header__name}>{FormatString(pokemon.name)}</h3>
         <p className={style.card_header_id}>#{formatNumber(pokemon.id)}</p>
       </header>
       <section className={style.card_body}>
