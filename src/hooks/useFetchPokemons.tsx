@@ -24,11 +24,13 @@ export const useGetPokemon = (name: string): GetPokemonResult => {
   return { data }
 }
 
-export const useGetPokemons = (): Pokemon[] => {
+export const useGetPokemons = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([])
+  const [isLoading, setIsloading] = useState<boolean>(true)
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsloading(true)
       const data = await fetch(`${BASE_URL}?limit=100&offset=0`)
       const paginationResponse: PaginationResponse = await data.json()
       paginationResponse.results.forEach(async result => {
@@ -37,8 +39,10 @@ export const useGetPokemons = (): Pokemon[] => {
         const pokemonMapped = mapPokemon(pokeApiResponse);
         setPokemons(prev => [...prev, pokemonMapped])
       })
+      setIsloading(false)
     }
-     fetchData().catch(console.error)
+      fetchData()  
   },[])
-  return pokemons
+
+  return {pokemons, isLoading}
 }

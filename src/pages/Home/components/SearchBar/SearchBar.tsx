@@ -1,7 +1,11 @@
 import style from './SearchBar.module.css'
 import searchIcon from '../../../../assets/images/Search icon.png'
 
-export const SearchComponent = () => {
+type StatProps = {
+  filterPokemons: (event: React.FormEvent<HTMLInputElement>) => void
+}
+
+export const SearchComponent: React.FC<StatProps> = ({filterPokemons}) => {
   return (
       <label className={style.search_bar}>
         <img
@@ -14,6 +18,7 @@ export const SearchComponent = () => {
           placeholder="Search a Pokémon"
           name="search"
           className={style.search_bar__input}
+          onChange={filterPokemons}
         />
       </label>
   )

@@ -1,15 +1,17 @@
 import style from './List.module.css'
 import { ListItemComponent } from '../ListItem/ListItem'
-import { useGetPokemons } from '../../../../hooks/useFetchPokemons'
+import { Pokemon } from '../../../../models/Pokemon'
 
-export const ListComponent = () => {
-  const pokemons = useGetPokemons()
+type ListProps = {
+  pokemons: Pokemon[]
+}
+
+export const ListComponent: React.FC<ListProps> = ({ pokemons }) => {
   return (
     <section className={style.list_container}>
-      {pokemons &&
-        pokemons.map(pokemon => (
-          <ListItemComponent pokemon={pokemon}></ListItemComponent>
-        ))}
+      {pokemons.map(pokemon => (
+        <ListItemComponent pokemon={pokemon}></ListItemComponent>
+      ))}
     </section>
   )
 }
