@@ -29,7 +29,7 @@ export const useGetPokemons = (): Pokemon[] => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(BASE_URL)
+      const data = await fetch(`${BASE_URL}?limit=100&offset=0`)
       const paginationResponse: PaginationResponse = await data.json()
       paginationResponse.results.forEach(async result => {
         const pokemonData = await fetch(`${BASE_URL}${result.name}`)
