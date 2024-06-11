@@ -6,7 +6,7 @@ export const ElectricIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_2053_1112)">
+    <g clipPath="url(#clip0_2053_1112)">
       <path
         d="M13.4375 9.0625H23.125L27.1875 21.875L20.9375 21.5625L24.6875 32.1875L9.6875 16.7188H16.875L13.4375 9.0625Z"
         fill="#ffff"

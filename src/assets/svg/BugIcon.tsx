@@ -6,7 +6,7 @@ export const BugIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_2053_1102)">
+    <g clipPath="url(#clip0_2053_1102)">
       <path
         d="M27.8126 12.5C26.5844 15.4844 24.2157 16.2969 21.2501 16.5625C19.4063 21.9781 21.4438 27.9594 25.3126 31.875C32.7751 28.3469 34.1438 17.8125 27.8126 12.5Z"
         fill="#ffff"
