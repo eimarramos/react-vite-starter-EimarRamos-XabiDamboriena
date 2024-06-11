@@ -10,7 +10,7 @@ export const ListComponent: React.FC<ListProps> = ({ pokemons }) => {
   return (
     <section className={style.list_container}>
       {pokemons.map(pokemon => (
-        <ListItemComponent pokemon={pokemon}></ListItemComponent>
+        <ListItemComponent key={pokemon.id} pokemon={pokemon}></ListItemComponent>
       ))}
     </section>
   )
