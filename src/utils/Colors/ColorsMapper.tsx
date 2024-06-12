@@ -18,4 +18,5 @@ export const colors: Record<string, string> = {
   rock: style.rock,
   steal: style.steal,
   dark: style.dark,
+  ice: style.ice,
 }

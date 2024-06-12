@@ -16,9 +16,9 @@ import { PyschiclonIcon } from '../../assets/svg/PsychicIcon'
 import { RockIcon } from '../../assets/svg/RockIcon'
 import { SteelIcon } from '../../assets/svg/SteelIcon'
 import { WaterIcon } from '../../assets/svg/WaterIcon'
+import { IceIcon } from '../../assets/svg/BugIcon copy'
 
 export const svgDictionary = (key: string) => {
-
   const dictionary: Record<string, ReactNode> = {
     bug: <BugIcon />,
     dark: <DarkIcon />,
@@ -37,6 +37,7 @@ export const svgDictionary = (key: string) => {
     rock: <RockIcon />,
     steel: <SteelIcon />,
     water: <WaterIcon />,
+    ice: <IceIcon />,
   }
 
   return dictionary[key]
