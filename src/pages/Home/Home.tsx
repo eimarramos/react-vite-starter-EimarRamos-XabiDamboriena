@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useGetPokemons } from '../../hooks/useFetchPokemons'
-// import { Pokemon } from '../../models/Pokemon'
 import { ListComponent } from './components/List/List'
 import { SearchComponent } from './components/SearchBar/SearchBar'
 

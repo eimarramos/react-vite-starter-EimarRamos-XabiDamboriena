@@ -1,6 +1,7 @@
 import style from './List.module.css'
 import { ListItemComponent } from '../ListItem/ListItem'
 import { Pokemon } from '../../../../models/Pokemon'
+import { LoadingItemComponent } from '../LoadingItem/LoadingItem'
 
 type ListProps = {
   pokemons: Pokemon[]
