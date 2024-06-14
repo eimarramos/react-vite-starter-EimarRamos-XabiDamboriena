@@ -21,6 +21,10 @@
     border-radius: var(--radius-s);
 }
 
+.search_bar:has(.search_bar__input:focus)  {
+    border-color: var(--color-accent);
+}
+
 .search_bar__icon {
     width: var(--spacing-xl);
     height: var(--spacing-xl);
