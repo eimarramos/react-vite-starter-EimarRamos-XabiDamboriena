@@ -21,7 +21,7 @@
     border-radius: var(--radius-s);
 }
 
-.search_bar:has(.search_bar__input:focus)  {
+.search_bar:has(.search_bar__input:focus) {
     border-color: var(--color-accent);
 }
 
@@ -39,7 +39,7 @@
 }
 
 @media (max-width: 768px) {
-    .search_bar{
+    .search_bar {
         width: 90%;
     }
 }
