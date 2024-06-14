@@ -5,14 +5,14 @@ import { mapPokemon } from '../utils/PokemonMapper/PokemonMapper'
 import { PokeApiResponse } from '../models/PokemonResponse'
 import { PaginationResponse } from '../models/PaginationResponse'
 
-export const useGetPokemons = () => {
+export const useGetPokemons = (numberOfPokemons: number) => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([])
   const [isLoading, setIsloading] = useState<boolean>(true)
 
   useEffect(() => {
 
     const fetchData = async () => {
-      const data = await fetch(`${BASE_URL}?limit=151&offset=0`)
+      const data = await fetch(`${BASE_URL}?limit=${numberOfPokemons}&offset=0`)
       const paginationResponse: PaginationResponse = await data.json()
 
       const promises = paginationResponse.results.map(async pokemonDTO => {
@@ -28,7 +28,7 @@ export const useGetPokemons = () => {
     }
 
     fetchData()  
-  },[])
+  },[numberOfPokemons])
 
   return {pokemons, isLoading}
 }
