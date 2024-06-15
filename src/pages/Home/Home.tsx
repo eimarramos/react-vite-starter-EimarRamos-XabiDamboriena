@@ -25,7 +25,7 @@ export const HomeComponent = () => {
 
       {error && <ErrorComponent></ErrorComponent>}
 
-      {filterPokemons.length !== 0 && (
+      {!error && !isLoading && filteredPokemons.length === 0 && (
         <EmptyComponent />
       )}
 
