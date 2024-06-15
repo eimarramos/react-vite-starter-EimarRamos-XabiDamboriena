@@ -7,7 +7,7 @@ type StatProps = {
 
 export const SearchComponent: React.FC<StatProps> = ({filterPokemons}) => {
   return (
-      <label className={style.search_bar}>
+      <label data-testid="searchLabel" className={style.search_bar}>
         <img
           src={searchIcon}
           alt="Search icon"

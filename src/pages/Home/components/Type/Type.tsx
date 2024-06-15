@@ -9,7 +9,7 @@ type TypeProps = {
 
 export const TypeComponent: React.FC<TypeProps> = ({ name }) => {
   return (
-    <div className={`${style.card_body_pills} ${colors[name]}`}>
+    <div data-testid="pill" className={`${style.card_body_pills} ${colors[name]}`}>
       {svgDictionary(name)}
       <p>{FormatString(name)}</p>
     </div>

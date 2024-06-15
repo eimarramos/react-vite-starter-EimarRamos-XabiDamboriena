@@ -6,6 +6,8 @@ test('El componente deberia rederizarse mostrando sus datos', () => {
   render(<TypeComponent name="fire" />)
 
   const typeName = screen.getByText('Fire')
+  const container = screen.getByTestId('pill')
 
-  expect(typeName, 'El nombre deberia mostrarse formateado').toBeInTheDocument()
+  expect(container, "Deberia ser de coclor rojo").toBeInTheDocument()
+  expect(typeName, 'Deberia apareceer en el documento').toBeInTheDocument()
 })
