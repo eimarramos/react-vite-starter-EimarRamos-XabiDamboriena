@@ -28,6 +28,7 @@ export const HomeComponent = () => {
             <LoadingItemComponent key={index} />
           ))}
       </ListComponent>
+      
     </>
   )
 }
