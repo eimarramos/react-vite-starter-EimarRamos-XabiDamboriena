@@ -1,4 +1,4 @@
-import { Pokemon } from "../../../../models/Pokemon";
+import { Pokemon } from "../../../../types/Pokemon";
 import { ListItemComponent } from "./ListItem";
 import {render, screen} from "@testing-library/react";
 import '@testing-library/jest-dom'

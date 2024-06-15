@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { BASE_URL } from '../config/config'
-import { Pokemon } from '../models/Pokemon'
+import { Pokemon } from '../types/Pokemon'
 import { mapPokemon } from '../utils/PokemonMapper/PokemonMapper'
-import { PokeApiResponse } from '../models/PokemonResponse'
-import { PaginationResponse } from '../models/PaginationResponse'
+import { PokeApiResponse } from '../types/PokemonResponse'
+import { PaginationResponse } from '../types/PaginationResponse'
 
 export const useGetPokemons = (numberOfPokemons: number) => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([])

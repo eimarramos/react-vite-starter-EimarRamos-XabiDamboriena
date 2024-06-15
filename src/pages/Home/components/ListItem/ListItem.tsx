@@ -1,6 +1,6 @@
 import style from './ListItem.module.css'
 import { StatComponent } from '../Stat/Stat'
-import { Pokemon } from '../../../../models/Pokemon'
+import { Pokemon } from '../../../../types/Pokemon'
 import { Weight } from '../../../../assets/svg/Weight'
 import { Ruler } from '../../../../assets/svg/Ruler'
 import { colors } from '../../../../utils/Colors/ColorsMapper'

@@ -1,6 +1,6 @@
 import style from './List.module.css'
 import { ListItemComponent } from '../ListItem/ListItem'
-import { Pokemon } from '../../../../models/Pokemon'
+import { Pokemon } from '../../../../types/Pokemon'
 import { ReactNode } from 'react';
 
 type ListProps = {
