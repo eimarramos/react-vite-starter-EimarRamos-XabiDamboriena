@@ -3,10 +3,11 @@ import { useGetPokemons } from '../../hooks/useFetchPokemons'
 import { ListComponent } from './components/List/List'
 import { SearchComponent } from './components/SearchBar/SearchBar'
 import { LoadingItemComponent } from './components/LoadingItem/LoadingItem'
+import { ErrorComponent } from './components/Error/Error'
 
 export const HomeComponent = () => {
   const numberOfPokemons = 150
-  const { pokemons, isLoading } = useGetPokemons(numberOfPokemons)
+  const { pokemons, isLoading, error } = useGetPokemons(numberOfPokemons)
 
   const [filterText, setfilterText] = useState<string>('')
 
@@ -22,6 +23,8 @@ export const HomeComponent = () => {
     <>
       <SearchComponent filterPokemons={filterPokemons}></SearchComponent>
 
+      {error && <ErrorComponent></ErrorComponent>}
+      
       <ListComponent pokemons={filteredPokemons}>
         {isLoading &&
           Array.from({ length: numberOfPokemons }, (_, index) => (
