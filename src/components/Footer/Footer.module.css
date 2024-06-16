@@ -16,4 +16,5 @@
 
 .footer__text {
   color: var(--color-brand-0);
+  text-align: center;
 }
