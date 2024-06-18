@@ -1,20 +1,21 @@
 import { Pokemon } from '../../../../types/Pokemon'
 import { ListItemComponent } from './ListItem'
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { render } from '../../../../utils/TestUtils/TestUtils'
 import '@testing-library/jest-dom'
 
 describe('ListItem', () => {
-  const pokemon: Pokemon = {
-    id: 1,
-    height: 60,
-    image: '',
-    name: 'Pikachu',
-    stats: [{ name: 'ATQ', value: 50 }],
-    types: ['electric'],
-    weight: 80,
-  }
-
   test('Deberia mostrar sus  propiedades', () => {
+    const pokemon: Pokemon = {
+      id: 1,
+      height: 60,
+      image: '',
+      name: 'Pikachu',
+      stats: [{ name: 'ATQ', value: 50 }],
+      types: ['electric'],
+      weight: 80,
+    }
+
     render(<ListItemComponent pokemon={pokemon} />)
 
     const pokemonName = screen.getByText('Pikachu')
@@ -27,16 +28,20 @@ describe('ListItem', () => {
   })
 
   test('Deberia tener los estilos correspondientes', () => {
-    render(<ListItemComponent pokemon={pokemon} />)
+    const pokemon: Pokemon = {
+      id: 1,
+      height: 60,
+      image: '',
+      name: 'Charmander',
+      stats: [{ name: 'ATQ', value: 50 }],
+      types: ['fire'],
+      weight: 80,
+    }
 
-    screen.debug()
+    render(<ListItemComponent pokemon={pokemon} />)
 
     const card = screen.getByTestId('pokemonCard')
 
-    console.log(card)
-
-    expect(card, 'Deberia tener el background de color amarillo').toHaveStyle(
-      'background-color:#ebd56c',
-    )
+    expect(card, 'Deberia tener la clase fire').toHaveClass('_fire_511e4f')
   })
 })
