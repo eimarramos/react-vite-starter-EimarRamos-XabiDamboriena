@@ -5,7 +5,7 @@ import { mapPokemon } from '../utils/PokemonMapper/PokemonMapper'
 import { PokeApiResponse } from '../types/PokemonResponse'
 import { PaginationResponse } from '../types/PaginationResponse'
 
-export const useGetPokemons = (numberOfPokemons: number) => {
+export const useGetPokemons = (numberOfPokemons: number = 150) => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([])
   const [isLoading, setIsloading] = useState<boolean>(true)
   const [error, setError] = useState<boolean>(false)
