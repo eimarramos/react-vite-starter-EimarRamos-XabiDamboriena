@@ -14,7 +14,7 @@ type ListItemProps = {
 
 export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
   return (
-    <article className={`${style.pokemon_card} ${colors[pokemon.types[0]]}`}>
+    <article data-testid='pokemonCard' className={`${style.pokemon_card} ${colors[pokemon.types[0]]}`}>
       <header className={style.card_header}>
         <h3 className={style.card_header__name}>{FormatString(pokemon.name)}</h3>
         <p className={style.card_header_id}>#{formatNumber(pokemon.id)}</p>

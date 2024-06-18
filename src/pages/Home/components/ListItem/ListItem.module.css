@@ -7,7 +7,6 @@
     padding: var(--spacing-xs);
 
     border-radius: var(--radius-xl);
-    background-color: var(--color-type-grass);
 }
 
 .card_header {
