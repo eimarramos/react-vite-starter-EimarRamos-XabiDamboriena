@@ -6,40 +6,16 @@ import * as allUseGetPokemons from '../../hooks/useFetchPokemons'
 
 const pokemons: Pokemon[] = [
   {
-    id: 123,
+    id: 1,
     name: 'Bulbasaur',
-    image: '123',
-    weight: 123,
-    height: 123,
-    types: ['fire'],
-    stats: [{ name: 'DEF', value: 30 }],
-  },
-  {
-    id: 123,
-    name: 'Charizard',
-    image: '123',
-    weight: 123,
-    height: 123,
-    types: ['fire'],
-    stats: [{ name: 'DEF', value: 30 }],
-  },
-  {
-    id: 123,
-    name: 'Lucario',
-    image: '123',
-    weight: 123,
-    height: 123,
-    types: ['fire'],
-    stats: [{ name: 'DEF', value: 30 }],
-  },
-  {
-    id: 123,
-    name: 'Pikachu',
-    image: '123',
-    weight: 123,
-    height: 123,
-    types: ['fire'],
-    stats: [{ name: 'DEF', value: 30 }],
+    image: '2',
+    weight: 3,
+    height: 4,
+    types: ['Grass', 'Poison'],
+    stats: [
+      { name: 'DEF', value: 30 },
+      { name: 'ATQ', value: 60 },
+    ],
   },
 ]
 
@@ -55,7 +31,7 @@ vitest.mock('../../hooks/useFetchPokemons', () => ({
 }))
 
 describe('HomeComponent', () => {
-  test('El componente deberia rederizarse mostrando sus datos', () => {
+  test('El mensaje de Error deberia mostrarse', () => {
     // vitest.spyOn(allUseGetPokemons, 'useGetPokemons').mockReturnValue({
     //   pokemons: [], isLoading: false, error: true
     // })
@@ -65,9 +41,54 @@ describe('HomeComponent', () => {
       isLoading: false,
       error: true,
     })
-    
+
     render(<HomeComponent />)
 
     expect(screen.getByTestId('errorComponente')).toBeVisible()
+  })
+
+  test('El mensaje de Error no deberia mostrarse', () => {
+    mockUseGetPokemons.mockReturnValue({
+      pokemons: [],
+      isLoading: false,
+      error: false,
+    })
+
+    render(<HomeComponent />)
+
+    expect(screen.queryByTestId('errorComponente')).not.toBeInTheDocument()
+  })
+
+  test('El componentes IsLoading deberia mostrarse', () => {
+    mockUseGetPokemons.mockReturnValue({
+      pokemons: pokemons,
+      isLoading: true,
+      error: false,
+    })
+
+    render(<HomeComponent />)
+
+    expect(screen.getByTestId('componenteLoading')).toBeInTheDocument()
+  })
+
+  test('El pokemon deberia mostrarse', () => {
+    mockUseGetPokemons.mockReturnValue({
+      pokemons: pokemons,
+      isLoading: false,
+      error: false,
+    })
+
+    render(<HomeComponent />)
+
+    expect(screen.getByText('#001')).toBeInTheDocument()
+    expect(screen.getByText('Bulbasaur')).toBeInTheDocument()
+    expect(screen.getByText('3 kg')).toBeInTheDocument()
+    expect(screen.getByText('4 m')).toBeInTheDocument()
+    expect(screen.getByText('Grass')).toBeInTheDocument()
+    expect(screen.getByText('Poison')).toBeInTheDocument()
+    expect(screen.getByText('DEF')).toBeInTheDocument()
+    expect(screen.getByText('ATQ')).toBeInTheDocument()
+    expect(screen.getByText('030')).toBeInTheDocument()
+    expect(screen.getByText('060')).toBeInTheDocument()
   })
 })

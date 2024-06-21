@@ -3,7 +3,7 @@ import style from './LoadingItem.module.css'
 
 export const LoadingItemComponent = () => {
   return (
-    <article className={style.pokemon_card}>
+    <article data-testid="componenteLoading" className={style.pokemon_card}>
       <WhitePokeball></WhitePokeball>
     </article>
   )
