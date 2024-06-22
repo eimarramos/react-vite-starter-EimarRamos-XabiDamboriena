@@ -1,17 +1,17 @@
-import { PokeApiResponse } from '../../types/PokemonResponse'
+import { PokeApiDTO } from '../../types/PokeApiDTO'
 import { Pokemon } from '../../types/Pokemon'
 
-export const mapPokemon = (data: PokeApiResponse): Pokemon => {
+export const mapPokemon = (data: PokeApiDTO): Pokemon => {
   const StatNaming: Record<string, string> = {
     hp: 'HP',
     attack: 'ATK',
     defense: 'DEF',
-    "special-attack": 'SAT',
-    "special-defense": 'SDF',
-    speed: 'SPD'
+    'special-attack': 'SAT',
+    'special-defense': 'SDF',
+    speed: 'SPD',
   }
 
-  const NormalizeStatName = (name : string) => {
+  const NormalizeStatName = (name: string) => {
     return StatNaming[name]
   }
 

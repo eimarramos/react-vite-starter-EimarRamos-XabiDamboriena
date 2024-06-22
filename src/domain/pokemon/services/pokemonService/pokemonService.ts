@@ -1,7 +1,7 @@
-import { BASE_URL } from '../../config/config'
-import { PaginationResponse } from '../../types/PaginationResponse'
-import { PokeApiResponse } from '../../types/PokemonResponse'
-import { mapPokemon } from '../../utils/PokemonMapper/PokemonMapper'
+import { BASE_URL } from '../../../../config/config'
+import { PaginationResponse } from '../../../../types/PaginationResponse'
+import { PokeApiDTO } from '../../../../types/PokeApiDTO'
+import { mapPokemon } from '../../../../utils/PokemonMapper/PokemonMapper'
 
 export const pokemonService = async () => {
   const data = await fetch(`${BASE_URL}?limit=${150}&offset=0`)
@@ -9,7 +9,7 @@ export const pokemonService = async () => {
 
   const promises = paginationResponse.results.map(async pokemonDTO => {
     const response = await fetch(`${BASE_URL}${pokemonDTO.name}`)
-    const pokeApiResponse: PokeApiResponse = await response.json()
+    const pokeApiResponse: PokeApiDTO = await response.json()
     const pokemonMapped = mapPokemon(pokeApiResponse)
 
     return pokemonMapped

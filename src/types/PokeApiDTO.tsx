@@ -1,4 +1,4 @@
-export type PokeApiResponse = {
+export type PokeApiDTO = {
   id: number
   name: string
   weight: number
