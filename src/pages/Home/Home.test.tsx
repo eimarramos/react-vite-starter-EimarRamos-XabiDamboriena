@@ -59,7 +59,7 @@ describe('HomeComponent', () => {
     expect(screen.queryByTestId('errorComponente')).not.toBeInTheDocument()
   })
 
-  test('El componentes IsLoading deberia mostrarse', () => {
+  test('El componente IsLoading deberia mostrarse', () => {
     mockUseGetPokemons.mockReturnValue({
       pokemons: pokemons,
       isLoading: true,
@@ -70,6 +70,30 @@ describe('HomeComponent', () => {
 
     expect(screen.getByTestId('componenteLoading')).toBeInTheDocument()
   })
+  test('El componente Empty deberia mostrarse', () => {
+    mockUseGetPokemons.mockReturnValue({
+      pokemons: [],
+      isLoading: false,
+      error: false,
+    })
+
+    render(<HomeComponent />)
+
+    expect(screen.getByTestId('componenteVacio')).toBeVisible()
+  })
+
+  test('El componente Empty no deberia mostrarse', () => {
+    mockUseGetPokemons.mockReturnValue({
+      pokemons: pokemons,
+      isLoading: false,
+      error: false,
+    })
+
+    render(<HomeComponent />)
+
+    expect(screen.queryByTestId('componenteVacio')).not.toBeInTheDocument()
+  })
+
 
   test('El pokemon deberia mostrarse', () => {
     mockUseGetPokemons.mockReturnValue({
