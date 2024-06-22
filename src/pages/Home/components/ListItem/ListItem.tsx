@@ -1,6 +1,6 @@
 import style from './ListItem.module.css'
 import { StatComponent } from '../Stat/Stat'
-import { Pokemon } from '../../../../types/Pokemon'
+import { Pokemon } from '../../../../infrastructure/api/pokeapi/types/Pokemon'
 import { Weight } from '../../../../assets/svg/Weight'
 import { Ruler } from '../../../../assets/svg/Ruler'
 import { colors } from '../../../../utils/Colors/ColorsMapper'
@@ -14,9 +14,14 @@ type ListItemProps = {
 
 export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
   return (
-    <article data-testid='pokemonCard' className={`${style.pokemon_card} ${colors[pokemon.types[0]]}`}>
+    <article
+      data-testid="pokemonCard"
+      className={`${style.pokemon_card} ${colors[pokemon.types[0]]}`}
+    >
       <header className={style.card_header}>
-        <h3 className={style.card_header__name}>{FormatString(pokemon.name)}</h3>
+        <h3 className={style.card_header__name}>
+          {FormatString(pokemon.name)}
+        </h3>
         <p className={style.card_header_id}>#{formatNumber(pokemon.id)}</p>
       </header>
       <section className={style.card_body}>
@@ -40,13 +45,11 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
           </div>
         </div>
         <div className={style.card_body__stats}>
-          {
-            pokemon.stats.map((stat, index) => {
-              return (
-                <StatComponent key={index} name={stat.name} value={stat.value} />
-              )
-            })
-          }
+          {pokemon.stats.map((stat, index) => {
+            return (
+              <StatComponent key={index} name={stat.name} value={stat.value} />
+            )
+          })}
         </div>
       </section>
     </article>

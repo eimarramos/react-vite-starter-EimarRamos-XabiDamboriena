@@ -1,7 +1,7 @@
 import { BASE_URL } from '../../../../config/config'
 import { PaginationResponse } from '../../../../types/PaginationResponse'
-import { PokeApiDTO } from '../../../../types/PokeApiDTO'
-import { mapPokemon } from '../../../../utils/PokemonMapper/PokemonMapper'
+import { PokeApiDTO } from '../../../../infrastructure/api/pokeapi/types/PokeApiDTO'
+import { mapPokemon } from '../../../../infrastructure/api/pokeapi/PokemonMapper/PokemonMapper'
 
 export const pokemonService = async () => {
   const data = await fetch(`${BASE_URL}?limit=${150}&offset=0`)

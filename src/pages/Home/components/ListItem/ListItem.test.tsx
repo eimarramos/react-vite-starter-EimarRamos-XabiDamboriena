@@ -1,4 +1,4 @@
-import { Pokemon } from '../../../../types/Pokemon'
+import { Pokemon } from '../../../../infrastructure/api/pokeapi/types/Pokemon'
 import { ListItemComponent } from './ListItem'
 import { screen } from '@testing-library/react'
 import { render } from '../../../../utils/TestUtils/TestUtils'

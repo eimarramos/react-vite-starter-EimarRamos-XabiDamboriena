@@ -1,7 +1,7 @@
 import style from './List.module.css'
 import { ListItemComponent } from '../ListItem/ListItem'
-import { Pokemon } from '../../../../types/Pokemon'
-import { ReactNode } from 'react';
+import { Pokemon } from '../../../../infrastructure/api/pokeapi/types/Pokemon'
+import { ReactNode } from 'react'
 
 type ListProps = {
   pokemons: Pokemon[]
@@ -13,7 +13,10 @@ export const ListComponent: React.FC<ListProps> = ({ pokemons, children }) => {
     <section className={style.list_container}>
       {children}
       {pokemons.map(pokemon => (
-        <ListItemComponent key={pokemon.id} pokemon={pokemon}></ListItemComponent>
+        <ListItemComponent
+          key={pokemon.id}
+          pokemon={pokemon}
+        ></ListItemComponent>
       ))}
     </section>
   )

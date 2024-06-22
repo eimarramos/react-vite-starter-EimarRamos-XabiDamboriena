@@ -9,5 +9,3 @@ export type Pokemon = {
   types: string[]
   stats: Stat[]
 }
-
-
