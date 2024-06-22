@@ -1,5 +1,4 @@
 import { BASE_URL } from '../../../../config/config'
-import { PaginationResponse } from '../../../../types/PaginationResponse'
 import { PokeApiDTO } from '../../../../infrastructure/api/pokeapi/types/PokeApiDTO'
 import { mapPokemon } from '../../../../infrastructure/api/pokeapi/PokemonMapper/PokemonMapper'
 import { getPokedex } from './getPokedex'
