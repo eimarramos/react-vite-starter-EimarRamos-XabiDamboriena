@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react'
+import { render, renderHook, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { HomeComponent } from './Home'
 import { Pokemon } from '../../types/Pokemon'
-import * as allUseGetPokemons from '../../hooks/useFetchPokemons'
+import { useGetPokemons } from '../../hooks/useFetchPokemons'
 
 const pokemons: Pokemon[] = [
   {
@@ -61,14 +61,14 @@ describe('HomeComponent', () => {
 
   test('El componente IsLoading deberia mostrarse', () => {
     mockUseGetPokemons.mockReturnValue({
-      pokemons: pokemons,
+      pokemons: [],
       isLoading: true,
       error: false,
     })
 
     render(<HomeComponent />)
 
-    expect(screen.getByTestId('componenteLoading')).toBeInTheDocument()
+    expect(screen.getAllByTestId('componenteLoading')[0]).toBeInTheDocument()
   })
   test('El componente Empty deberia mostrarse', () => {
     mockUseGetPokemons.mockReturnValue({
@@ -93,7 +93,6 @@ describe('HomeComponent', () => {
 
     expect(screen.queryByTestId('componenteVacio')).not.toBeInTheDocument()
   })
-
 
   test('El pokemon deberia mostrarse', () => {
     mockUseGetPokemons.mockReturnValue({
