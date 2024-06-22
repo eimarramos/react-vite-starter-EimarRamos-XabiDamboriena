@@ -2,7 +2,6 @@ import { render, renderHook, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { HomeComponent } from './Home'
 import { Pokemon } from '../../infrastructure/api/pokeapi/types/Pokemon'
-import { useGetPokemons } from '../../hooks/useFetchPokemons'
 
 const pokemons: Pokemon[] = [
   {
@@ -26,16 +25,12 @@ const pokemons: Pokemon[] = [
 // }))
 
 const mockUseGetPokemons = vitest.fn()
-vitest.mock('../../hooks/useFetchPokemons', () => ({
+vitest.mock('./hooks/useFetchPokemons', () => ({
   useGetPokemons: () => mockUseGetPokemons(),
 }))
 
 describe('HomeComponent', () => {
   test('El mensaje de Error deberia mostrarse', () => {
-    // vitest.spyOn(allUseGetPokemons, 'useGetPokemons').mockReturnValue({
-    //   pokemons: [], isLoading: false, error: true
-    // })
-
     mockUseGetPokemons.mockReturnValue({
       pokemons: [],
       isLoading: false,

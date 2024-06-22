@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { useGetPokemons } from '../../hooks/useFetchPokemons'
 import { ListComponent } from './components/List/List'
 import { SearchComponent } from './components/SearchBar/SearchBar'
 import { LoadingItemComponent } from './components/LoadingItem/LoadingItem'
 import { ErrorComponent } from './components/Error/Error'
 import { EmptyComponent } from './components/Empty/Empty'
+import { useGetPokemons } from './hooks/useFetchPokemons'
 
 export const HomeComponent = () => {
   const numberOfPokemons = 150
