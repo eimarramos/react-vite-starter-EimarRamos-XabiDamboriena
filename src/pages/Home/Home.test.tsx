@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { HomeComponent } from './Home'
 import { Pokemon } from '../../types/Pokemon'
-import * as allUseGetPokemons from '../../hooks/useFetchPokemons'
 
 const pokemons: Pokemon[] = [
   {
