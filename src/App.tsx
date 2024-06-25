@@ -1,6 +1,10 @@
 import { NavbarComponent } from './components/Navbar/Navbar'
 import { HomeComponent } from './pages/Home/Home'
 import { FooterComponent } from './components/Footer/Footer'
+import { pokemonService } from './domain/pokemon/services/pokemonService/pokemonService'
+import { pokemonApiRepository } from './infrastructure/api/pokeapi/pokemonRepository/pokeApiRepository'
+
+pokemonService.init(pokemonApiRepository)
 
 function App() {
   return (

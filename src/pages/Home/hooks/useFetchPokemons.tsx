@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { pokemonService } from '../../../domain/pokemon/services/pokemonService/pokemonService'
 import { Pokemon } from '../../../infrastructure/api/pokeapi/types/Pokemon'
+import { pokemonApiRepository } from '../../../infrastructure/api/pokeapi/pokemonRepository/pokeApiRepository'
 
 export const useGetPokemons = (numberOfPokemons: number = 150) => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([])
@@ -10,7 +11,7 @@ export const useGetPokemons = (numberOfPokemons: number = 150) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const getPokemons = await pokemonService()
+        const getPokemons = await pokemonService.getPokemons()
 
         setPokemons(getPokemons)
       } catch (error) {
