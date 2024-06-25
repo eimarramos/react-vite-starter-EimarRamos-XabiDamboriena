@@ -1,4 +1,4 @@
-import { PokemonRepository } from '../interfaces/PokemonRepository'
+import { PokemonRepository } from '../../domain/pokemon/model/PokemonRepository'
 
 let pokemonRepo: PokemonRepository
 

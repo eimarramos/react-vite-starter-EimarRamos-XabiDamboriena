@@ -1,5 +1,3 @@
-import { Stat } from './Stat'
-
 export type Pokemon = {
   id: number
   name: string
@@ -8,4 +6,9 @@ export type Pokemon = {
   height: number
   types: string[]
   stats: Stat[]
+}
+
+export type Stat = {
+  name: string;
+  value: number;
 }
