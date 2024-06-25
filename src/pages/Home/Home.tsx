@@ -5,7 +5,6 @@ import { LoadingItemComponent } from './components/LoadingItem/LoadingItem'
 import { ErrorComponent } from './components/Error/Error'
 import { EmptyComponent } from './components/Empty/Empty'
 import { useGetPokemons } from './hooks/useFetchPokemons'
-import * as allUseGetPokemons from '../../hooks/useFetchPokemons'
 
 export const HomeComponent = () => {
   const numberOfPokemons = 150
