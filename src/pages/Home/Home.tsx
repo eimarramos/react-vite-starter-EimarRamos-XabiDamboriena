@@ -16,7 +16,11 @@ export const HomeComponent = () => {
   }
 
   const filteredPokemons = pokemons.filter(pokemon =>
-    pokemon.name.toLowerCase().includes(filterText.toLowerCase()),
+    pokemon.name.toLowerCase().includes(filterText.toLowerCase()) || 
+    pokemon.types.some((type) => {
+      return type.toLowerCase().includes(filterText.toLowerCase())
+    })
+    ,
   )
 
   return (
