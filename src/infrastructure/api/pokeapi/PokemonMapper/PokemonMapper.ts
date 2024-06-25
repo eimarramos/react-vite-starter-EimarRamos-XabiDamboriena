@@ -1,5 +1,5 @@
 import { PokeApiDTO } from '../types/PokeApiDTO'
-import { Pokemon } from '../types/Pokemon'
+import { Pokemon } from '../../../../domain/pokemon/model/Pokemon'
 
 export const mapPokemon = (data: PokeApiDTO): Pokemon => {
   const StatNaming: Record<string, string> = {

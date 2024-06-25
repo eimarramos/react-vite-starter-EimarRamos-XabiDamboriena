@@ -1,4 +1,4 @@
-import { PokemonRepository } from '../../../../domain/pokemon/services/interfaces/PokemonRepository'
+import { PokemonRepository } from '../../../../services/interfaces/PokemonRepository'
 import { getPokedex } from './getPokemon/getPokedex'
 import { getPokemonDetails } from './getPokemon/getPokemonDetail'
 

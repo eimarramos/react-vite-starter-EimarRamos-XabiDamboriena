@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { ListComponent } from './List'
-import { Pokemon } from '../../../../infrastructure/api/pokeapi/types/Pokemon'
+import { Pokemon } from '../../../../domain/pokemon/model/Pokemon'
 
 test('El componente deberia rederizarse mostrando sus datos', () => {
   const pokemons: Pokemon[] = [

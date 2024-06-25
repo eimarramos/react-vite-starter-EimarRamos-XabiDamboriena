@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { HomeComponent } from './Home'
-import { Pokemon } from '../../infrastructure/api/pokeapi/types/Pokemon'
+import { Pokemon } from '../../domain/pokemon/model/Pokemon'
 
 const pokemons: Pokemon[] = [
   {
