@@ -7,8 +7,7 @@ import { EmptyComponent } from './components/Empty/Empty'
 import { useGetPokemons } from './hooks/useFetchPokemons'
 
 export const HomeComponent = () => {
-  const numberOfPokemons = 150
-  const { pokemons, isLoading, error } = useGetPokemons(numberOfPokemons)
+  const { pokemons, isLoading, error } = useGetPokemons()
   const [filterText, setfilterText] = useState<string>('')
 
   const filterPokemons = (e: React.FormEvent<HTMLInputElement>) => {
