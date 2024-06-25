@@ -31,7 +31,7 @@ export const HomeComponent = () => {
 
       <ListComponent pokemons={filteredPokemons}>
         {isLoading &&
-          Array.from({ length: numberOfPokemons }, (_, index) => (
+          Array.from({ length: 20 }, (_, index) => (
             <LoadingItemComponent key={index} />
           ))}
       </ListComponent>
