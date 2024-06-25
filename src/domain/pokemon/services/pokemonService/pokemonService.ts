@@ -1,4 +1,4 @@
-import { PokemonRepository, pokemonApiRepository } from '../../../../infrastructure/api/pokeapi/pokemonRepository/pokeApiRepository'
+import { PokemonRepository } from '../interfaces/PokemonRepository'
 
 let pokemonRepo: PokemonRepository
 
@@ -13,5 +13,5 @@ const getPokemons = async () => {
 
 export const pokemonService = {
   init,
-  getPokemons
+  getPokemons,
 }

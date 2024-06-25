@@ -1,4 +1,4 @@
-import { render, renderHook, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { HomeComponent } from './Home'
 import { Pokemon } from '../../infrastructure/api/pokeapi/types/Pokemon'

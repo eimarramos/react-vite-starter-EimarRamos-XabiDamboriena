@@ -1,4 +1,4 @@
-import { Pokemon } from '../types/Pokemon'
+import { PokemonRepository } from '../../../../domain/pokemon/services/interfaces/PokemonRepository'
 import { getPokedex } from './getPokemon/getPokedex'
 import { getPokemonDetails } from './getPokemon/getPokemonDetail'
 
@@ -14,10 +14,6 @@ const getPokemons = async () => {
   return pokemonArray
 }
 
-export type PokemonRepository = {
-  getPokemons: () => Promise<Pokemon[]>
-}
-
 export const pokemonApiRepository: PokemonRepository = {
-  getPokemons
+  getPokemons,
 }
