@@ -1,7 +1,6 @@
 import { Pokemon } from '../../../../infrastructure/api/pokeapi/types/Pokemon'
 import { ListItemComponent } from './ListItem'
-import { screen } from '@testing-library/react'
-import { render } from '../../../../utils/TestUtils/TestUtils'
+import { screen, render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 describe('ListItem', () => {
