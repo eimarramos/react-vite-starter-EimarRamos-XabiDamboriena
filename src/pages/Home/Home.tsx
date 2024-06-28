@@ -14,12 +14,12 @@ export const HomeComponent = () => {
     setfilterText(e.currentTarget.value)
   }
 
-  const filteredPokemons = pokemons.filter(pokemon =>
-    pokemon.name.toLowerCase().includes(filterText.toLowerCase()) || 
-    pokemon.types.some((type) => {
-      return type.toLowerCase().includes(filterText.toLowerCase())
-    })
-    ,
+  const filteredPokemons = pokemons.filter(
+    pokemon =>
+      pokemon.name.toLowerCase().includes(filterText.toLowerCase()) ||
+      pokemon.types.some(type => {
+        return type.toLowerCase().includes(filterText.toLowerCase())
+      }),
   )
 
   return (
