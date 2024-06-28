@@ -41,6 +41,6 @@ describe('ListItem', () => {
 
     const card = screen.getByTestId('pokemonCard')
 
-    expect(card, 'Deberia tener la clase fire').toHaveClass('_fire_511e4')
+    expect(card, 'Deberia tener la clase fire').toHaveClass('_fire_511e')
   })
 })
