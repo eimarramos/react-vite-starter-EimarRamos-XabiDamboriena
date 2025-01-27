@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Pokemon } from '../../../domain/pokemon/model/Pokemon'
 import { pokemonService } from '../../../services/pokemonService/pokemonService'
 
-export const useGetPokemons = (numberOfPokemons: number = 150) => {
+export const useGetPokemons = (numberOfPokemons: number = 1000) => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([])
   const [isLoading, setIsloading] = useState<boolean>(true)
   const [error, setError] = useState<boolean>(false)
